@@ -1,5 +1,17 @@
+// Probelem 
+// Write a function that takes in a non-empty array of distinct integers and an
+// integer representing a target sum. If any two numbers in the input array sum
+// up to the target sum, the function should return them in an array, in any
+// order. If no two numbers sum up to the target sum, the function should return
+// an empty array.
+
+
+// let array = [3, 5, -4, 8, 11, 1, -1, 6];
+// let targetSum = 10;
+
+
 // Two Number Sum loops O(n^2) time | O(1) space
-function twoNumberSum(array, targetSum) {
+function twoNumberSumLoop(array, targetSum) {
     // Write your code here.
     const newArrayResult = [];
     console.log("targetNumber:", targetSum)
@@ -28,8 +40,10 @@ function twoNumberSum(array, targetSum) {
     
   }
 
+
+
   // Two sum hash table
-  function twoNumberSum(array, targetSum) {
+  function twoNumberSumHash(array, targetSum) {
     // Write your code here.
     let nums = {};
     for (let index = 0; index < array.length; index++) {
@@ -48,7 +62,7 @@ function twoNumberSum(array, targetSum) {
   }
 
   // Two sum position sort O(nlog(n)) | O(1)
-  function twoNumberSum(array, targetSum) {
+  function twoNumberSumSort(array, targetSum) {
     // sort negative to positive
     function sortNumber(a, b) {
      return a - b;
