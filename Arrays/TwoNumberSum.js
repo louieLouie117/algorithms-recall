@@ -43,21 +43,26 @@ function twoNumberSumLoop(array, targetSum) {
 
 
   // Two sum hash table
-  function twoNumberSumHash(array, targetSum) {
-    // Write your code here.
+  function twoNumberSum(array, targetSum) {
+    console.log("data", array, "target", targetSum);
     let nums = {};
-    for (let index = 0; index < array.length; index++) {
-      let num = array[index]
+    
+    for (let index = 0; index < array.length; index++) {    
+      let num = array[index];
       let potentialMatch = targetSum - num;
+      
       if(potentialMatch in nums){
-        console.log("found two sums")      
+        console.log("Final object data", nums)
+        console.log("found two sums", [potentialMatch, num])         
         return [potentialMatch, num]
       }else{
-        nums[num] = true;
-      }
+        console.log("add to object", nums) 
+        nums[num] = "check";
+        
+      } 
       
     }  
-    console.log("nums object", nums)
+    
     return [];
   }
 
