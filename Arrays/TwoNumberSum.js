@@ -100,6 +100,7 @@ function twoNumberSumLoop(array, targetSum) {
 
 
 
+<<<<<<< HEAD
   const fruits = ['apple', 'banana', 'orange'];
 
   const logFruits = () => {
@@ -109,3 +110,7 @@ function twoNumberSumLoop(array, targetSum) {
   }
   
   logFruits();
+=======
+
+Ss
+>>>>>>> 0be002da4f0c9def97bbd69e131c759e21c89218
