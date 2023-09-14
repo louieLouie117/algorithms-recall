@@ -96,3 +96,16 @@ function twoNumberSumLoop(array, targetSum) {
     return [];
   
   }
+
+
+
+
+  const fruits = ['apple', 'banana', 'orange'];
+
+  const logFruits = () => {
+    for (let fruit of fruits) {
+      console.log(fruit);
+    }
+  }
+  
+  logFruits();

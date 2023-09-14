@@ -56,6 +56,36 @@ while (1 < 10) {
   };
 
 
+// Examples of loops
+
+const fruits = ['apple', 'banana', 'orange'];
+
+const forLooop = () => {
+  for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+  }
+}
+
+logFruits();
+
+
+
+const forEachLoop = () => {
+  fruits.forEach((fruit) => {
+    console.log(fruit);
+  });
+}
+
+
+const numbers = [1, 2, 3];
+
+const doubleNumbers = numbers.map((number) => {
+  return number * 2;
+});
+
+console.log(doubleNumbers);
+
+
 
 
 // Conditional Statements:-----------------------------------------------
