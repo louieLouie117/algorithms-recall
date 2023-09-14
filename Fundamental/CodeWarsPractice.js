@@ -12,12 +12,6 @@ function doubleChar(str) {
   }
 
 
-  function doubleChar(str) {
-    // Your code here
-    const newStr = str.split("").map(char => char.repeat(2)).join("");
-    return `The result is ${newStr}`;
-  }
-  
 
 //------------------------------------------------------------------------------
 
@@ -27,7 +21,6 @@ function numberToString(num) {
   // Return a string of the number here!
   //   let str = String(num);
   let str = num.toString();
-
   return str;
 }
 

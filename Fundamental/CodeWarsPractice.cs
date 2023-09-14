@@ -26,7 +26,6 @@ public class Kata
     {
         // code here
         string str = num.ToString();
-
         return str;
     }
 }
