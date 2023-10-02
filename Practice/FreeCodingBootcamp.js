@@ -16,5 +16,13 @@ const wordBlanks = "I saw a " + myAdjective + " ugly " + myNoun + " and I " + my
 // Only change code above this line
 
 
-
 // Store Multiple Values in one Variable using JavaScript Arrays
+const myArray = ["Hello", 2023, "World"];
+
+// Nest one Array within Another Array
+const myArray = [["Bulls", 23], ["White Sox", 45]];
+
+// Access Array Data with Indexes
+// Create a variable called myData and set it to equal the first value of myArray using bracket notation
+const myArray = [50, 60, 70];
+let myData = myArray[0]
