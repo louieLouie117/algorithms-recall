@@ -36,6 +36,8 @@ const myArray = [18, 64, 99];
 myArray[0] = 45;
 
 
+
+
 // ccess Multi-Dimensional Arrays With Indexes
 // Using bracket notation select an element from myArray such that myData is equal to 8.
 const myArray = [
@@ -46,4 +48,33 @@ const myArray = [
   ];
   
   const myData = myArray[2][1];
+
+
+
+
+
+// Wednesday Oct 4 2023--------------------------------------------------
+
+// Manipulate Arrays With .push() Method added elements to the end 
+const myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3]);
+
+
+// Manipulate Arrays With pop Method removes from the end
+const myArray = [["John", 23], ["cat", 2]];
+let removedFromMyArray = myArray.pop();
+
+// Manipulate Arrays With .shift() Method removed from the start
+const myArray = [["John", 23], ["dog", 3]];
+let removedFromMyArray = myArray.shift();
+
+
+
+// Manipulate Arrays With .unshift() Method addeds elements to the start
+// Setup
+const myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+// Added to the start of he array
+myArray.unshift(["Paul", 35])
+
 
