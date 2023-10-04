@@ -78,3 +78,90 @@ myArray.shift();
 myArray.unshift(["Paul", 35])
 
 
+
+// Shopping List multi-dimensional array
+const myList = [
+  ["Kandy", 20],
+  ["Shoes", 1],
+  ["Shirt", 5],
+  ["Phone", 2],
+  ["Cookes", 5]
+];
+
+
+// Reusable JavaScript with Function
+function reusableFunction(){
+  console.log("Hi World")
+}
+
+reusableFunction();
+
+
+// Passing Values to Functions with Arguments
+/* Parameters are variables that act as placeholders for the values 
+that are to be input to a function when it is called. When a function 
+is defined, it is typically defined along with one or more parameters. 
+The actual values that are input (or "passed") into a function when it
+ is called are known as arguments. */
+function functionWithArgs(p1, p2){
+    console.log(p1 + p2);
+  }
+functionWithArgs(1,2);
+
+
+ 
+// Return a Value from a Function with Return
+/*We can pass values into a function with arguments. You can use 
+a return statement to send a value back out of a function. */
+function timesFive(num){
+  return num * 5;
+}
+
+const answer = timesFive(2);
+
+
+// Global Scope and Functions
+/*In JavaScript, scope refers to the visibility of variables. 
+Variables which are defined outside of a function block have Global 
+scope. This means, they can be seen everywhere in your JavaScript code.
+
+Variables which are declared without the let or const keywords are 
+automatically created in the global scope. This can create unintended 
+consequences elsewhere in your code or when running a function again. 
+You should always declare your variables with let or const. */
+
+// Declare the myGlobal variable below this line
+let myGlobal = 10;
+function fun1() {
+  // Assign 5 to oopsGlobal here
+  oopsGlobal = 5;
+}
+// Only change code above this line
+function fun2() {
+  let output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+ 
+
+// Local Scope and Functions
+/**Variables which are declared within a function, as well as the 
+ function parameters, have local scope. That means they are only 
+ visible within that function. */
+ function myLocalScope() {
+  // Only change code below this line
+  let myVar = "hello world";
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+console.log('outside myLocalScope', myVar);
+
+ 
