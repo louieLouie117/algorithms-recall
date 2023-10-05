@@ -164,4 +164,80 @@ myLocalScope();
 // myVar is not defined outside of myLocalScope
 console.log('outside myLocalScope', myVar);
 
+// Global vs. Local Scope in Functions
+/* It is possible to have both local and global variables with 
+the same name. When you do this, the local variable takes precedence 
+over the global variable. */
+
+// Setup
+const outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+  let outerWear = "sweater";
+  // Only change code above this line
+  return outerWear;
+}
+
+myOutfit();
+
+// Understanding Undefined Value returned from a Function
+/*A function can include the return statement but it does not have to.
+ In the case that the function doesn't have a return statement, when 
+ you call it, the function processes the inner code but the returned 
+ value is undefined.*/
+
+ // Setup
+let sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+}
+
+// Only change code below this line
+function addFive(){
+  sum = sum + 5;
+}
+
+// Only change code above this line
+
+addThree();
+addFive();
+
+
+//  Algorithms and Data Structures
+/* This was fun. I never knew you could reassign a variable 
+to a function tha has an argument this will be good when I needed
+to get results */
+let processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+// Only change code below this line
+processed = processArg(7);
+console.log(processed)
+
+// Stand in Line
+/*In Computer Science a queue is an abstract Data Structure where items
+ are kept in order. New items can be added at the back of the queue and 
+ old items are taken off from the front of the queue */
+
+/*This was fun and even though I had to wathc a the vidoe I learn a lot
+I thought that I could not change the retrun but that is what they were 
+asking for. */
+ function nextInLine(arr, item) {
+  // Only change code below this line
+  arr.push(item);
+  console.log("resuts", arr)
+  let nextInLine = arr.shift()
+  
+  return nextInLine;
+  // Only change code above this line
+}
+
+// Setup
+let testArr = [1, 2, 3, 4, 5];
+
  
