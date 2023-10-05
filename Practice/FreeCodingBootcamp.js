@@ -240,4 +240,103 @@ asking for. */
 // Setup
 let testArr = [1, 2, 3, 4, 5];
 
- 
+
+
+
+
+// ---------------------------------------------------------10/05/2023
+
+
+// Understanding Boolean Values
+/*Another data type is the Boolean. Booleans may only be one of two 
+values: true or false. They are basically little on-off switches, 
+where true is on and false is off. These two states are mutually 
+exclusive. */
+function welcomeToBooleans() {
+  // Only change code below this line
+  let boolean = true;
+  return boolean // Change this line
+  // Only change code above this line
+}
+
+
+// Use Conditional Logic with If Statements
+/*if statements are used to make decisions in code. The keyword if 
+tells JavaScript to execute the code in the curly braces under certain 
+conditions, defined in the parentheses. These conditions are known as 
+Boolean conditions and they may only be true or false.
+
+When the condition evaluates to true, the program executes the 
+statement inside the curly braces. When the Boolean condition evaluates
+to false, the statement inside the curly braces will not execute. */
+function trueOrFalse(wasThatTrue) {
+  if (wasThatTrue){
+    return "Yes, that was true";
+  }
+  return "No, that was false"
+}
+
+
+//  Comparison with the Equality Operator
+/*There are many comparison operators in JavaScript. All of these 
+operators return a boolean true or false value.
+
+The most basic operator is the equality operator ==. The equality 
+operator compares two values and returns true if they're equivalent 
+or false if they are not. Note that equality is different from 
+assignment (=), which assigns the value on the right of the operator 
+to a variable on the left. */
+function testEqual(val) {
+  if (val == 12) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testEqual(10);
+
+// Comparison with the Strict Equality Operator
+/*trict equality (===) is the counterpart to the equality operator (==).
+ However, unlike the equality operator, which attempts to convert both
+values being compared to a common type, the strict equality operator 
+does not perform a type conversion.
+If the values being compared have different types, they are considered 
+unequal, and the strict equality operator will return false */
+function testStrict(val) {
+  if (val === 7) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testStrict(10);
+
+
+
+// Practice comparing different values skiped it was to easy
+
+
+// Comparison with the Inequality Operator
+/*The inequality operator (!=) is the opposite of the equality operator. 
+It means not equal and returns false where equality would return 
+true and vice versa. Like the equality operator, the inequality 
+operator will convert data types of values while comparing. */
+function testNotEqual(val) {
+  if (val != 99) { // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+testNotEqual(10);
+
+
+
+
+
+
+
+
+
+
+
