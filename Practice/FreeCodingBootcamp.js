@@ -514,6 +514,20 @@ function testElseIf(val) {
 testElseIf(7);
 
 
+// Logical Order in If Else Statements
+/* The order of the if starment will give diffrent ansswers. 
+// Make sure the order is correct
+*/
+
+function orderMyLogic(val) {
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
 
 
 
