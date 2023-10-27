@@ -564,6 +564,117 @@ function orderMyLogic(val) {
 
 
 
+    // Selecting from Many Options with Switch Statements---------------------
+
+ /*
+If you need to match one value against many options,
+ you can use a switch statement. A switch statement
+  compares the value to the case statements which 
+define various possible values. Any valid JavaScript 
+statements can be executed inside a case block and 
+will run from the first matched case value until a 
+break is encountered. */
+
+function caseInSwitch(val) {
+  let answer = "";
+  // Only change code below this line
+switch (val){
+  case 1:
+    answer = "alpha";
+    break;
+  case 2:
+    answer = "beta";
+    break;
+  case 3:
+    answer = "gamma";
+    break;
+  case 4:
+    answer = "delta";
+
+}
+  // Only change code above this line
+  return answer;
+}
+
+caseInSwitch(1);
+
+// Adding a Default Option in Switch Statements---------------------------------
+
+/*In a switch statement you may not be able to 
+specify all possible values as case statements. 
+Instead, you can add the default statement which 
+will be executed if no matching case statements are 
+found. Think of it like the final else statement in 
+an if/else chain. */
+
+function switchOfStuff(val) {
+  let answer = "";
+  // Only change code below this line
+  switch(val){
+    case "a":
+      answer = "apple";
+      break;
+    case "b":
+      answer = "bird";
+      break;
+    case "c": 
+      answer = "cat";
+      break;
+    default:
+      answer = "stuff";
+      break;
+
+  }
+
+  // Only change code above this line
+  return answer;
+}
+
+switchOfStuff(1);
+
+// Multiple Identical Options in Switch Statements
+
+/*If the break statement is omitted from a switch 
+statement's case, the following case statement(s) 
+are executed until a break is encountered. If you 
+have multiple inputs with the same output, you can 
+represent them in a switch statement like this: */
+function sequentialSizes(val) {
+  let answer = "";
+  // Only change code below this line
+  switch(val){
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  }
+  // Only change code above this line
+  return answer;
+}
+
+sequentialSizes(1);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
