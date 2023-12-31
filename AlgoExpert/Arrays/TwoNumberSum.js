@@ -44,11 +44,12 @@ function twoNumberSumS1(array, targetSum) {
               // Return the pair of numbers
               return newArrayResult;  
           }
-          console.log("finalResult;", newArrayResult)
       } 
   }
-  // If we've gone through the whole array and haven't found a pair of numbers that add up to the target sum, return an empty array
-  return [];
+ 
+// If we've gone through the whole array and haven't found a pair of numbers that add up to the target sum, return an empty array
+console.log("No pair of numbers found that add up to the target sum.", []);
+return [];
 }
 
 

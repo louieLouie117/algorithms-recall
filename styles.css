@@ -4,8 +4,11 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: whitesmoke;
+    /* liner gradient background*/
+    background: linear-gradient(85deg, rgb(0, 171, 194), rgb(0, 149, 168));
     padding: 20px;
+    color: white;
+    font-size: 1.2em;
 
 }
 ul{
@@ -15,16 +18,18 @@ ul{
 }
 .algo-container{
     display: grid;
+
 }
 
 .algo-container>li{
-    background-color: whitesmoke;
+    background-color: none  ;
     display: grid;
     justify-content: center;
     max-width: 55em;
 
 }
 .algo-container>li>main{
+    color: black;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -46,6 +51,8 @@ ul{
 
 .instructions>li{
     background-color: whitesmoke;
+    /* background: linear-gradient(85deg, rgb(0, 171, 194), rgb(0, 149, 168));
+    color: white; */
     padding: 10px;
     border-radius: 5px;
 
