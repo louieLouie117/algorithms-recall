@@ -1,0 +1,52 @@
+body{
+    display: grid;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+    padding: 20px;
+
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.algo-container{
+    display: grid;
+}
+
+.algo-container>li{
+    background-color: whitesmoke;
+    display: grid;
+    justify-content: center;
+    max-width: 55em;
+
+}
+.algo-container>li>main{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    justify-self: center;
+}
+
+.algo-container>li>main>section{
+    padding-bottom: 50px;
+    border-bottom: dashed 1px rgba(0, 0, 0, 0.459);
+}
+
+.instructions{
+    display: grid;
+    margin-top: 20px;
+    row-gap: 10px;
+
+}
+
+.instructions>li{
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
    
 </head>
 
@@ -13,7 +14,7 @@
 <body>
     <h1>Arrays</h1>
 
-    <ul>
+    <ul class="algo-container">
         <li>
             <header>
                 <h2>Two Number sum.</h2>
@@ -30,31 +31,42 @@
                     <button onclick="twoNumberSumS1([5, 1, 22, 25, 6, -1, 8, 10],
                     [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
                     <button onclick="twoNumberSumS1([4, 6], 10 )">[4, 6], Traget = 10</button>
-                    <button onclick="twoNumberSumS1([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+                    <button onclick="twoNumberSumS1([4, 6, 1], 5)">[4, 6, 1, 3, 2], Target = 5 </button>
+
+                <aside>
+                    <h4>Instructions</h4>
+                    <ul class="instructions">
+                        <li>1. Crate a function with parameters array and targetSum</li>
+                        <li>2. Initialize an empty array to store the pair of numbers that add up to the target sum.</li>
+                    </ul>
+                </aside>
 
                 </section>
+                <section>
+
                     <h3>Solution 2 - using object</h3>
                     <p>This function uses an object to store the numbers in the array. It loops through the array, and for each number, it checks whether the difference between the target sum and that number is in the object. If it is, it means that we've found a pair of numbers that add up to the target sum, so we return them. If it isn't, we add that number to the object and continue iterating through the array.</p>
                     <button onclick="twoNumberSumS2([5, 1, 22, 25, 6, -1, 8, 10],
                     [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
                     <button onclick="twoNumberSumS2([4, 6], 10 )">[4, 6], Traget = 10</button>
                     <button onclick="twoNumberSumS2([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
-                <section>
 
                     
                 </section>
-                <h3>Solution 3 - using pointers</h3>
-                <p>This function uses a two-pointer technique to find a pair of numbers in the array that add up to the target sum. It first sorts the array in ascending order, then it initializes two pointers: one at the start of the array, and one at the end. It calculates the sum of the numbers at the start and end pointers, and if the sum is equal to the target sum, it returns those two numbers. If the sum is less than the target sum, it moves the start pointer to the right. If the sum is greater than the target sum, it moves the end pointer to the left. It continues this process until it either finds a pair of numbers that add up to the target sum, or it has gone through the whole array without finding such a pair, in which case it returns an empty array.</p>
-                <button onclick="twoNumberSumS2([5, 1, 22, 25, 6, -1, 8, 10],
-                [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
-                <button onclick="twoNumberSumS2([4, 6], 10 )">[4, 6], Traget = 10</button>
-                <button onclick="twoNumberSumS2([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
-         
+                <section>
+                    <h3>Solution 3 - using pointers</h3>
+                    <p>This function uses a two-pointer technique to find a pair of numbers in the array that add up to the target sum. It first sorts the array in ascending order, then it initializes two pointers: one at the start of the array, and one at the end. It calculates the sum of the numbers at the start and end pointers, and if the sum is equal to the target sum, it returns those two numbers. If the sum is less than the target sum, it moves the start pointer to the right. If the sum is greater than the target sum, it moves the end pointer to the left. It continues this process until it either finds a pair of numbers that add up to the target sum, or it has gone through the whole array without finding such a pair, in which case it returns an empty array.</p>
+                    <button onclick="twoNumberSumS2([5, 1, 22, 25, 6, -1, 8, 10],
+                    [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
+                    <button onclick="twoNumberSumS2([4, 6], 10 )">[4, 6], Traget = 10</button>
+                    <button onclick="twoNumberSumS2([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+                </section>
                 <footer>
                     <h3>Summery</h3>
-                    <p>twoNumberSumS1: This function uses a brute-force approach with a time complexity of O(n^2) and a space complexity of O(1). It's simple and straightforward, but it can be slow for large arrays because it checks every pair of numbers.</p>
-                    <p> twoNumberSumS2: This function uses a hash table with a time complexity of O(n) and a space complexity of O(n). It's faster than the first function for large arrays, but it uses more memory to store the hash table.</p>
-                    <p>twoNumberSumS3: This function uses a two-pointer technique with a time complexity of O(n log n) due to the sorting operation, and a space complexity of O(1). It's more efficient than the first function and uses less memory than the second function, but it requires the input array to be sorted or sortable, which might not always be the case.</p>
+                    <p>Solution 1: This function uses a brute-force approach with a time complexity of O(n^2) and a space complexity of O(1). It's simple and straightforward, but it can be slow for large arrays because it checks every pair of numbers.</p>
+                    <p> Solution 2: This function uses a hash table with a time complexity of O(n) and a space complexity of O(n). It's faster than the first function for large arrays, but it uses more memory to store the hash table.</p>
+                    <p> Solution 3: This function uses a two-pointer technique with a time complexity of O(n log n) due to the sorting operation, and a space complexity of O(1). It's more efficient than the first function and uses less memory than the second function, but it requires the input array to be sorted or sortable, which might not always be the case.</p>
+                    <a href="https://github.com/louieLouie117/algorithms-recall/blob/main/AlgoExpert/Arrays/TwoNumberSum.js">View Code</a>
                 </footer>
             </main>
             
@@ -75,7 +87,7 @@
                 <p>There are three ways to solve this algorithm.</p>
                 <section>
                     <h3>Solution 1 - Using a for of loop</h3>   
-                    <h3>Sample Input</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo voluptatem officia corrupti explicabo consequuntur natus quis enim, illo, provident nesciunt doloribus quaerat. Asperiores assumenda nulla repellat incidunt, cum impedit iste!</p>
                     <button onclick="isValidSubsequenceS1( 
                     [5, 1, 22, 25, 6, -1, 8, 10],
                     [5, 1, 22, 6, -1, 8, 10])">  [5, 1, 22, 25, 6, -1, 8, 10],[5, 1, 22, 6, -1, 8, 10]</button>
@@ -88,7 +100,6 @@
 
                     <section>
                         <h3>Solution 2 - Using a for loop</h3>   
-                        <h3>Sample Input</h3>
                         <button onclick="isValidSubsequenceS2( 
                         [5, 1, 22, 25, 6, -1, 8, 10],
                         [5, 1, 22, 6, -1, 8, 10])">  [5, 1, 22, 25, 6, -1, 8, 10],[5, 1, 22, 6, -1, 8, 10]</button>
@@ -110,6 +121,11 @@
                     
         
                             </section>
+                            <footer>
+                                <h3>Summery</h3>
+
+                                <a href="https://github.com/louieLouie117/algorithms-recall/blob/main/AlgoExpert/Arrays/ValidateSubsequence.js">View Code</a>
+                            </footer>
             </main>
            
 
