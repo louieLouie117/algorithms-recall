@@ -9,7 +9,8 @@ You can assume that there will be at most one pair of numbers summing up to the 
 */
 
 // Solution 1
-function twoNumberSum(array, targetSum) {
+function twoNumberSumS1(array, targetSum) {
+    console.log("twoNumberSum was called!!");
     // Write your code here.
     const newArrayResult = [];
     console.log("targetNumber:", targetSum)
@@ -37,11 +38,64 @@ function twoNumberSum(array, targetSum) {
     return [];
     
   }
+
+
+
+  // Solution 2 - using object
+  function twoNumberSumS2(array, targetSum) {
+    console.log("data", array, "target", targetSum);
+    let nums = {};
+    
+    for (let index = 0; index < array.length; index++) {    
+      let num = array[index];
+      let potentialMatch = targetSum - num;
+      
+      if(potentialMatch in nums){
+        console.log("Final object data", nums)
+        console.log("found two sums", [potentialMatch, num])         
+        return [potentialMatch, num]
+      }else{
+        console.log("add to object", nums) 
+        nums[num] = "check";
+        
+      } 
+      
+    }  
+    
+    return [];
+  }
+
+  // Solution 3 - using pointers
+  function twoNumberSumS3(array, targetSum) {
+    // sort negative to positive
+    function sortNumber(a, b) {
+     return a - b;
+    }
+    array.sort(sortNumber);
+    console.log(array);
+    
+    let startPointer = 0;
+    let endPointer = array.length -1;
   
+    while (startPointer < endPointer){
+        let currentSum = array[startPointer] + array[endPointer];
+        if(currentSum === targetSum){
+          console.log("return both sums")
+          return [array[startPointer], array[endPointer] ]
+          
+          }else if(currentSum < targetSum){
+              console.log("increase the left pointer")
+              startPointer += 1;
+          }else if (currentSum > targetSum ){
+            console.log("decrease the right pointer")
+              endPointer -= 1;
+          }
+      
+    }
+    return [];
   
+  }
   
-  // test cases 1 for toNumberSum function
-  const array = [3, 5, -4, 8, 11, 1, -1, 6];
-  const targetSum = 10;
+
   
   
