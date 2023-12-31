@@ -1,4 +1,5 @@
-const { twoNumberSum } = require('./arrays');
+const { twoNumberSum } = require('./TwoNumberSum');
+const { TransposeMatrix } = require('./TransposeMatrix');
 
 describe('twoNumberSum', () => {
   it('should return an empty array if no two numbers sum up to the target sum', () => {
@@ -23,3 +24,21 @@ describe('twoNumberSum', () => {
     expect(result).toContain(-1);
   });
 });
+
+
+describe('TransposeMatrix', () => {
+  it('should return an empty array if no two numbers sum up to the target sum', () => {
+    const matrix = [
+      [1, 5, 7],
+      [3, 4, 6],
+      [9, 8, 4],
+    ];
+    const result = TransposeMatrix(matrix);
+    expect(result).toEqual([
+      [1, 3, 9],
+      [5, 4, 8],
+      [7, 6, 4],
+    ]);
+  });
+})
+
