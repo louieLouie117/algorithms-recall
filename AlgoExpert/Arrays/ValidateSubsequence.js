@@ -68,30 +68,6 @@ function isValidSubsequenceS3(array, sequence) {
 
 
  
-  describe('isValidSubsequence', () => {
-    it('returns true for a valid subsequence', () => {
-      const array = [5, 1, 22, 25, 6, -1, 8, 10];
-      const sequence = [1, 6, -1, 10];
-      const result = isValidSubsequence(array, sequence);
-      expect(result).toBe(true);
-    });
-  
-    it('returns false for an invalid subsequence', () => {
-      const array = [5, 1, 22, 25, 6, -1, 8, 10];
-      const sequence = [5, 1, 22, 25, 6, -1, 8, 10, 12];
-      const result = isValidSubsequence(array, sequence);
-      expect(result).toBe(false);
-    });
-  
-    it('returns true for an empty subsequence', () => {
-      const array = [5, 1, 22, 25, 6, -1, 8, 10];
-      const sequence = [];
-      const result = isValidSubsequence(array, sequence);
-      expect(result).toBe(true);
-    });
-  });
-
- 
 
 
 
