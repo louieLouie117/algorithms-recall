@@ -18,22 +18,25 @@
     <ul>
         <li>
             <header>
-            <h2>Two Number sum.</h2>
-            <p>Create a function that takes in an array of distinct integers and an integer representing a target sum. The function should return an array containing any two numbers from the input array that sum up to the target sum. If no two numbers sum up to the target sum, the function should return an empty array.</p>
-            <p>Make a list of numbers. Then, pick two numbers from the list that add up to a certain number. If you can’t find two numbers that add up to that number, then you don’t have any numbers on your list.</p>
-
+                <h2>Two Number sum.</h2>
+                <p>Create a function that takes in an array of distinct integers and an integer representing a target sum. The function should return an array containing any two numbers from the input array that sum up to the target sum. If no two numbers sum up to the target sum, the function should return an empty array.</p>
+                <p>Make a list of numbers. Then, pick two numbers from the list that add up to a certain number. If you can’t find two numbers that add up to that number, then you don’t have any numbers on your list.</p>
             </header>
 
             <main>
-<h2>Solutions</h2>
+                <h2>Solutions</h2>
                 <p>There are three ways to solve this algorithm.</p>
+                <section>
+                    <h3>Solution 1 - two nested for loops</h3>
+                    <button onclick="twoNumberSum([5, 1, 22, 25, 6, -1, 8, 10],
+                    [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
+                    <button onclick="twoNumberSum([4, 6], 10 )">[4, 6], Traget = 10</button>
+                    <button onclick="twoNumberSum([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+
+                </section>
             </main>
             
-            <h3>Sample Input</h3>
-            <button onclick="twoNumberSum([5, 1, 22, 25, 6, -1, 8, 10],
-            [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
-            <button onclick="twoNumberSum([4, 6], 10 )">[4, 6], Traget = 10</button>
-            <button onclick="twoNumberSum([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+         
 
         </li>
 
@@ -76,7 +79,6 @@
 
                         <section>
                             <h3>Solution 3 - Using a while loop</h3>   
-                            <h3>Sample Input</h3>
                             <button onclick="isValidSubsequenceS3( 
                             [5, 1, 22, 25, 6, -1, 8, 10],
                             [5, 1, 22, 6, -1, 8, 10])">  [5, 1, 22, 25, 6, -1, 8, 10],[5, 1, 22, 6, -1, 8, 10]</button>
