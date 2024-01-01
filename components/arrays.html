@@ -59,16 +59,22 @@
                     <h3>Solution 2 - using object</h3>
                     <p>This function uses a hash table (the nums object) to store the numbers it has visited. For each number, it calculates the potential match (the number that, when added to the current number, equals the target sum). If the potential match is in the nums object, it returns the pair of numbers. If the potential match is not in the nums object, it adds the current number to the nums object. If it goes through all the numbers without finding a pair that adds up to the target sum, it returns an empty array. This approach has a time complexity of O(n) and a space complexity of O(n).</p>
                     <footer>
-                        <button onclick="twoNumberSumS2([5, 1, 22, 25, 6, -1, 8, 10],
+                        <button onclick="twoNumberSumArrow([5, 1, 22, 25, 6, -1, 8, 10],
                         [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
-                        <button onclick="twoNumberSumS2([4, 6], 10 )">[4, 6], Traget = 10</button>
-                        <button onclick="twoNumberSumS2([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+                        <button onclick="twoNumberSumArrow([4, 6], 10 )">[4, 6], Traget = 10</button>
+                        <button onclick="twoNumberSumArrow([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
                     </footer>
 
                     <aside>
                         <h4>Instructions</h4>
                         <ul class="instructions">
-                            <li>1. add steps here</li>
+                            <li>1. Crate a function with parameters array and targetSum</li>
+                            <li>2. Initialize an empty object to store the numbers we've visited</li>
+                            <li>3. Using a for of loop iterate over the array</li>
+                            <li>4. Calculate the potential match by subtracting the current number from the target sum</li>
+                            <li>5. If statement to check If the potential match is in the nums object, we've found a pair of numbers that add up to the target sum</li>
+                            <li>6. Else statement to check if the potential match is not in the nums object, add the current number to the nums object</li>
+                            <li>7. If we've gone through the whole array and haven't found a pair of numbers that add up to the target sum, return an empty array</li>
                            
                         </ul>
                     </aside>
@@ -80,10 +86,10 @@
                     <p>This function uses a two-pointer technique to find a pair of numbers in the array that add up to the target sum. It first sorts the array in ascending order, then it initializes two pointers: one at the start of the array, and one at the end. It calculates the sum of the numbers at the start and end pointers, and if the sum is equal to the target sum, it returns those two numbers. If the sum is less than the target sum, it moves the start pointer to the right. If the sum is greater than the target sum, it moves the end pointer to the left. It continues this process until it either finds a pair of numbers that add up to the target sum, or it has gone through the whole array without finding such a pair, in which case it returns an empty array.</p>
 
                     <footer>
-                        <button onclick="twoNumberSumS2([5, 1, 22, 25, 6, -1, 8, 10],
+                        <button onclick="twoNumberSumS3([5, 1, 22, 25, 6, -1, 8, 10],
                         [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
-                        <button onclick="twoNumberSumS2([4, 6], 10 )">[4, 6], Traget = 10</button>
-                        <button onclick="twoNumberSumS2([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+                        <button onclick="twoNumberSumS3([4, 6], 10 )">[4, 6], Traget = 10</button>
+                        <button onclick="twoNumberSumS3([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
                     </footer>
                     <aside>
                         <h4>Instructions</h4>
@@ -103,6 +109,59 @@
             </main>
             
          
+
+        </li>
+
+    
+
+
+        <li>
+            <header>
+                <h2>Spiral Traverse</h2>
+                <p>
+                    Write a function that takes in an n x m two-dimensional array (that can be square-shaped when n == m) and returns a one-dimensional array of all the array's elements in spiral order.
+                    
+                    Spiral order starts at the top left corner of the two-dimensional array, goes to the right, and proceeds in a spiral pattern all the way until every element has been visited.
+                    </p>
+                    <p>In other words write a function that takes a two-dimensional array (an array with multple arrays [[1,2,3], [4,5,6,7], [8,9,10, 11, 12]]) and returns a one-dimensional array of all the elements in spiral order. </p>
+            </header>
+
+            <main>
+                <h2>Solutions</h2>
+                <p>There are two ways to solve this algorithm iterative and recursive.</p>
+                <section>
+                    <h3>Solution 1 - Iteratively</h3>
+                    <p>In this solution, loops are used to traverse the 2D array in a spiral pattern. The outer while loop continues as long as there are unvisited layers in the array. The four inner for loops are used to traverse each layer of the array in a spiral order (right across the top row, down the last column, left across the bottom row, and up the first column).
+
+                        This process is repeated for each layer of the array until all elements have been visited. This is a systematic and efficient way to traverse a 2D array, and it's a good example of how iterative techniques can be used to solve problems.</p>
+                    <footer>
+                        <h4>Test in the console</h4>
+                        <button onclick="spiralTraverseS1([[1,2,3,4], [12,13,14,5], [11,16,15,6], [10,9,8,7]])">[[1,2,3,4], [12,13,14,5], [11,16,15,6], [10,9,8,7]]</button>
+                        
+                </footer>
+
+                <aside>
+                    <h4>Instructions</h4>
+                    <ul class="instructions">
+                        <li>1. It first initializes four variables (startRow, endRow, startCol, endCol) to represent the current "layer" of the matrix that we're traversing.</li>
+                        <li>2. The outer while loop continues as long as there are unvisited layers in the matrix.</li>
+                        <li>3. Inside the while loop, there are four for loops, each responsible for traversing one edge of the current layer in the spiral order (right across the top row, down the last column, left across the bottom row, and up the first column).</li>
+                        <li>4. After each layer is traversed, the startRow, endRow, startCol, endCol variables are updated to move to the next inner layer.</li>
+                        <li>5. The elements visited during the traversal are added to the resultsArray</li>
+                        <li>6. The process continues until all layers of the matrix have been visited, at which point the resultsArray is returned, containing the elements of the matrix in the order they were visited during the spiral traversal.</li>
+                    </ul>
+                </aside>
+
+                </section>
+           
+             
+                <footer>
+                    <h3>Summery</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolorem necessitatibus obcaecati sunt! Laborum quidem quos quam tenetur ratione excepturi quia ex libero, quisquam officia quibusdam at. Totam, vitae corporis?</p>
+                    <a href="https://github.com/louieLouie117/algorithms-recall/blob/main/AlgoExpert/Arrays/TwoNumberSum.js">View Code</a>
+                </footer>
+            </main>
+        
 
         </li>
 
@@ -161,6 +220,46 @@
             </main>
            
 
+
+        </li>
+
+        <li>
+            <header>
+                <h2>Algorithm Template.</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam maxime corrupti exercitationem inventore! Molestiae quas cupiditate distinctio explicabo enim, quo nemo ullam quasi praesentium quia, reprehenderit iure totam rem maxime.</p>
+            </header>
+
+            <main>
+                <h2>Solutions</h2>
+                <p>There are # ways to solve this algorithm.</p>
+                <section>
+                    <h3>Solution 1 - </h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, exercitationem quod? Nam odit soluta, in qui voluptas esse expedita placeat dolor explicabo maxime culpa dolores cum, inventore, quasi sunt commodi!</p>
+                    <footer>
+                        <h4>Test in the console</h4>
+                        <button onclick="twoNumberSumS1([5, 1, 22, 25, 6, -1, 8, 10],
+                        [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
+                        
+                </footer>
+
+                <aside>
+                    <h4>Instructions</h4>
+                    <ul class="instructions">
+                        <li>1. Crate a function with parameters array and targetSum</li>
+                       
+                    </ul>
+                </aside>
+
+                </section>
+           
+             
+                <footer>
+                    <h3>Summery</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolorem necessitatibus obcaecati sunt! Laborum quidem quos quam tenetur ratione excepturi quia ex libero, quisquam officia quibusdam at. Totam, vitae corporis?</p>
+                    <a href="https://github.com/louieLouie117/algorithms-recall/blob/main/AlgoExpert/Arrays/TwoNumberSum.js">View Code</a>
+                </footer>
+            </main>
+        
 
         </li>
     </ul>

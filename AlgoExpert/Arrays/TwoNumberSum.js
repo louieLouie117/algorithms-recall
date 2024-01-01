@@ -82,6 +82,25 @@ function twoNumberSumS2(array, targetSum) {
   return [];
 }
 
+const twoNumberSumArrow = (array, targetSum) => {
+  console.log("twoNumberSumArrow was called!!");
+
+  let arrynums = {};
+
+  for (let num of array){
+    let potentialMatch = targetSum - num;
+    if (potentialMatch in arrynums){
+      console.log("return both sums",   [potentialMatch, num]);
+      return [potentialMatch, num];
+    } else {
+      arrynums[num] = true;
+    }
+  }
+  console.log("No pair of numbers found that add up to the target sum.", []);
+  return [];
+
+}
+
  // Solution 3 - using pointers
 /*
 This function uses a two-pointer technique to find a pair of numbers in the array that add up to the target sum. It first sorts the array in ascending order, then it initializes two pointers: one at the start of the array, and one at the end. It calculates the sum of the numbers at the start and end pointers, and if the sum is equal to the target sum, it returns those two numbers. If the sum is less than the target sum, it moves the start pointer to the right. If the sum is greater than the target sum, it moves the end pointer to the left. It continues this process until it either finds a pair of numbers that add up to the target sum, or it has gone through the whole array without finding such a pair, in which case it returns an empty array.
