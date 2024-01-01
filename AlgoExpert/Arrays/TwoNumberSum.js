@@ -58,28 +58,29 @@ return [];
   /**
     This function uses an object to store the numbers in the array. It loops through the array, and for each number, it checks whether the difference between the target sum and that number is in the object. If it is, it means that we've found a pair of numbers that add up to the target sum, so we return them. If it isn't, we add that number to the object and continue iterating through the array.
    */
-  function twoNumberSumS2(array, targetSum) {
-    console.log("data", array, "target", targetSum);
-    let nums = {};
-    
-    for (let index = 0; index < array.length; index++) {    
-      let num = array[index];
-      let potentialMatch = targetSum - num;
+// Solution 2
+function twoNumberSumS2(array, targetSum) {
+  // Initialize an empty object to store the numbers we've visited
+  const nums = {};
+  
+  // Iterate over the array
+  for (let num of array) {
+      // Calculate the potential match by subtracting the current number from the target sum
+      const potentialMatch = targetSum - num;
       
-      if(potentialMatch in nums){
-        console.log("Final object data", nums)
-        console.log("found two sums", [potentialMatch, num])         
-        return [potentialMatch, num]
-      }else{
-        console.log("add to object", nums) 
-        nums[num] = "check";
-        
-      } 
-      
-    }  
-    
-    return [];
+      // If the potential match is in the nums object, we've found a pair of numbers that add up to the target sum
+      if (potentialMatch in nums) {
+          // Return the pair of numbers
+          return [potentialMatch, num];
+      } else {
+          // If the potential match is not in the nums object, add the current number to the nums object
+          nums[num] = true;
+      }
   }
+  
+  // If we've gone through the whole array and haven't found a pair of numbers that add up to the target sum, return an empty array
+  return [];
+}
 
  // Solution 3 - using pointers
 /*

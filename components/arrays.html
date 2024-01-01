@@ -57,21 +57,41 @@
                 <section>
 
                     <h3>Solution 2 - using object</h3>
-                    <p>This function uses an object to store the numbers in the array. It loops through the array, and for each number, it checks whether the difference between the target sum and that number is in the object. If it is, it means that we've found a pair of numbers that add up to the target sum, so we return them. If it isn't, we add that number to the object and continue iterating through the array.</p>
-                    <button onclick="twoNumberSumS2([5, 1, 22, 25, 6, -1, 8, 10],
-                    [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
-                    <button onclick="twoNumberSumS2([4, 6], 10 )">[4, 6], Traget = 10</button>
-                    <button onclick="twoNumberSumS2([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+                    <p>This function uses a hash table (the nums object) to store the numbers it has visited. For each number, it calculates the potential match (the number that, when added to the current number, equals the target sum). If the potential match is in the nums object, it returns the pair of numbers. If the potential match is not in the nums object, it adds the current number to the nums object. If it goes through all the numbers without finding a pair that adds up to the target sum, it returns an empty array. This approach has a time complexity of O(n) and a space complexity of O(n).</p>
+                    <footer>
+                        <button onclick="twoNumberSumS2([5, 1, 22, 25, 6, -1, 8, 10],
+                        [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
+                        <button onclick="twoNumberSumS2([4, 6], 10 )">[4, 6], Traget = 10</button>
+                        <button onclick="twoNumberSumS2([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+                    </footer>
+
+                    <aside>
+                        <h4>Instructions</h4>
+                        <ul class="instructions">
+                            <li>1. add steps here</li>
+                           
+                        </ul>
+                    </aside>
 
                     
                 </section>
                 <section>
                     <h3>Solution 3 - using pointers</h3>
                     <p>This function uses a two-pointer technique to find a pair of numbers in the array that add up to the target sum. It first sorts the array in ascending order, then it initializes two pointers: one at the start of the array, and one at the end. It calculates the sum of the numbers at the start and end pointers, and if the sum is equal to the target sum, it returns those two numbers. If the sum is less than the target sum, it moves the start pointer to the right. If the sum is greater than the target sum, it moves the end pointer to the left. It continues this process until it either finds a pair of numbers that add up to the target sum, or it has gone through the whole array without finding such a pair, in which case it returns an empty array.</p>
-                    <button onclick="twoNumberSumS2([5, 1, 22, 25, 6, -1, 8, 10],
-                    [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
-                    <button onclick="twoNumberSumS2([4, 6], 10 )">[4, 6], Traget = 10</button>
-                    <button onclick="twoNumberSumS2([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+
+                    <footer>
+                        <button onclick="twoNumberSumS2([5, 1, 22, 25, 6, -1, 8, 10],
+                        [5, 1, 22, 6, -1, 8, 10])">[3, 5, -4, 8, 11, 1, -1, 6], Traget = 10</button>
+                        <button onclick="twoNumberSumS2([4, 6], 10 )">[4, 6], Traget = 10</button>
+                        <button onclick="twoNumberSumS2([4, 6, 1], 5)">[4, 6, 1], Target = 5 </button>
+                    </footer>
+                    <aside>
+                        <h4>Instructions</h4>
+                        <ul class="instructions">
+                            <li>1. add steps here</li>
+                           
+                        </ul>
+                    </aside>
                 </section>
                 <footer>
                     <h3>Summery</h3>
