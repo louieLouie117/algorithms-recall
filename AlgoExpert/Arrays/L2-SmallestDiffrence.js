@@ -57,3 +57,6 @@ function smallestDifference(arrayOne, arrayTwo) {
     // Return the pair of numbers with the smallest difference
     return smallestPair;
 }
+
+
+// This function works by sorting both arrays and then iterating through them with two pointers. It compares the numbers at the current positions of the pointers, calculates the difference, and moves the pointer that points to the smaller number forward. If it finds a pair of numbers with a smaller difference than the smallest difference found so far, it updates the smallest difference and the pair of numbers. The process is repeated until both pointers have reached the end of their respective arrays. The function then returns the pair of numbers with the smallest difference.
