@@ -32,8 +32,6 @@ function sortedSquaredArray(array) {
 //    This solution has a time complexity of O(nlog(n)), where n is the length of the input array. This is because the array is iterated over once, and each element is squared and added to a new array. The new array is then sorted using the built-in sort method, which has a time complexity of O(nlog(n)).
 
 
-   
-
 
 // Solution 2
 function sortedSquaredArray(array) {
