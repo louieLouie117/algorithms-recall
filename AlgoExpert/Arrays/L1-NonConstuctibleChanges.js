@@ -53,7 +53,5 @@ function nonConstructibleChangeS2(coins) {
     return changeAmount + 1;
 }
 
-
+// /*  */
 // Both functions work by sorting the coins in ascending order and then iterating through each coin. If a coin is found that is greater than the current change amount plus 1, the function returns the change amount plus 1, as this is the smallest amount of change that cannot be created. If no such coin is found after all coins have been processed, the function returns the change amount plus 1.
-
-
