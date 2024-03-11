@@ -43,3 +43,40 @@ function solution(string) {
       
     }
   }
+
+  /**
+   * 3/11/2024
+   * Complete the square sum function so that it squares each number passed into it and then sums the results together.
+   * Thsi was the first time I used Math.pow() and it was very useful for this problem.
+*/
+    function squareSum(numbers){
+      // Log the input array to the console
+      console.log(numbers)
+      
+      // Initialize an empty array to hold the squares of the numbers
+      let arraySquare = [];
+      
+      // Initialize a variable to hold the result
+      let result = 0;
+      
+      // Loop over the input array
+      for(let i = 0; i < numbers.length; i++){
+        // Square each number and store it in the variable 'square'
+        let square = Math.pow(numbers[i], 2);  
+        
+        // Push the square of the number to the 'arraySquare' array
+        arraySquare.push(square)   
+      }
+      
+      // Loop over the 'arraySquare' array
+      for(let j = 0; j < arraySquare.length; j++){       
+        // Add each square to the 'result' variable
+        result += arraySquare[j]
+      }
+      
+      // Log the result to the console
+      console.log("result", result)
+      
+      // Return the result
+      return result;
+    }
