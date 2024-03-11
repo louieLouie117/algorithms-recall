@@ -51,11 +51,9 @@ function solution(string) {
 */
     function squareSum(numbers){
       // Log the input array to the console
-      console.log(numbers)
-      
+      console.log(numbers) 
       // Initialize an empty array to hold the squares of the numbers
       let arraySquare = [];
-      
       // Initialize a variable to hold the result
       let result = 0;
       
@@ -78,5 +76,18 @@ function solution(string) {
       console.log("result", result)
       
       // Return the result
+      return result;
+    }
+
+// using the ** operator and a single loop
+    function squareSum(numbers) {
+      let result = 0;
+    
+      for (let i = 0; i < numbers.length; i++) {
+        const square = numbers[i] ** 2;
+        result += square;
+      }
+    
+      console.log("result:", result);
       return result;
     }
