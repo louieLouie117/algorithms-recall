@@ -138,6 +138,7 @@ return number;
     
 }
 
+
 // Refactored no result varibale needed
 function simpleMultiplication(number) {
   console.log("number", number);
@@ -155,6 +156,10 @@ function simpleMultiplication(number) {
 }
 
 
+
+
+
+
 // 3/12/2024 
 // Find the the other angle
 // This was a smmple but fun alogos reay like the fundamentas 
@@ -166,6 +171,11 @@ function otherAngle(a, b) {
   console.log(c)
   return c;
 }
+
+
+
+
+
 
 // 3/12/2024
 function countSheep (num){
@@ -186,4 +196,48 @@ function countSheep (num){
   console.log("resultSting", resultSting)
   return resultSting;
 
+}
+
+
+
+
+
+
+/* 3/18/2024 
+Return the number (count) of vowels in the given string.
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+The input string will only consist of lower case letters and/or spaces.
+*/
+
+function countVowels(str) {
+  console.log(str)
+  let count = 0;
+  let vowels = ["a","e","i","o","u"]
+  
+  for(let i = 0; i < str.length; i++){
+    console.log("str", str[i])
+    for(let j = 0; j < vowels.length; j++){
+      if(vowels[j] === str[i]){
+        count += 1;
+      }
+    }
+  }
+  console.log(count)
+  return count;
+}
+
+// refactored with Ai. This uses the includes method to check if a character is in the vowels array
+function countVowels(str) {
+  console.log(str);
+  const vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+
+  for (const char of str) {
+      if (vowels.includes(char)) {
+          count++;
+      }
+  }
+
+  console.log(count);
+  return count;
 }
