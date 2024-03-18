@@ -91,3 +91,27 @@ function solution(string) {
       console.log("result:", result);
       return result;
     }
+
+
+    /*3/11/2024: Fundom
+    Return the number (count) of vowels in the given string.
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+The input string will only consist of lower case letters and/or spaces.
+    */
+
+    function getCount(str) {
+      console.log(str)
+      let count = 0;
+      let vowels = ["a","e","i","o","u"]
+      
+      for(let i = 0; i < str.length; i++){
+        console.log("str", str[i])
+        for(let j = 0; j < vowels.length; j++){
+          if(vowels[j] === str[i]){
+            count += 1;
+          }
+        }
+      }
+      console.log(count)
+      return count;
+    }
