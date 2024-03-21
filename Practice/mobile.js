@@ -38,5 +38,25 @@ function updateLight(current) {
     let thePerficSquare = n >= 0 && Math.sqrt(n) % 1 === 0;
     return thePerficSquare
   }
-  
+
+
+
+
+  /**3/21/204
+   * Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+   */
+  function presentSheeps(sheep) {
+    console.log("Sheep", sheep)
+    let missingSheep = 0;
+    for(let i=0; i < sheep.length; i++){
+      console.log("is sheep precent",sheep[i])
+      if(sheep[i] === null || sheep[i] === undefined || sheep[i] === false){
+        missingSheep += 1;
+      }
+    }
+    
+    console.log("missing sheep count:", missingSheep)
+    let presentSheep = sheep.length - missingSheep;
+    return presentSheep;
+  }
   
