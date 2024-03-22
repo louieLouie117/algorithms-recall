@@ -92,5 +92,41 @@ Return True if you're better, else False!
       return false;
     }
   }
+
+
+
+
+
+  /**
+   * 3/22/24
+ Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+Use conditionals to return the proper message:
+
+case	return
+name equals owner	'Hello boss'
+otherwise return 'Hello guest'
+   */
+  function greetBoss (name, owner) {
+    // Add code here
+    console.log("name", name)
+    console.log("owner", owner)
+    
+    if(name === owner){
+      return "Hello boss"
+    }else{
+      return "Hello guest"
+    }
+  }
+
+
+
+
+
+
+
+
+
+
   
   
