@@ -121,6 +121,57 @@ otherwise return 'Hello guest'
 
 
 
+  // MorseCode 3/25/2024 ---------------------- pending soutions
+  /** 
+   * https://www.codewars.com/kata/54b724efac3d5402db00065e/train/javascript
+   * 
+   */
+  decodeMorse = function(morseCode) {
+    console.log(morseCode);
+
+    let letterToDecode = "";
+    let decodedMessage = [];
+
+    for (let i = 0; i < morseCode.length; i++) {
+        console.log(morseCode[i]);
+        if (morseCode[i] === " ") {
+            console.log("Space");
+            console.log(letterToDecode);
+            const trimmedLetter = letterToDecode.trim(); // Trim spaces
+            const decodedChar = MORSE_CODE[trimmedLetter];
+            if (decodedChar) {
+                decodedMessage.push(decodedChar);
+            } else {
+                console.log("Invalid Morse code:", trimmedLetter);
+            }
+            letterToDecode = "";
+        } else {
+            letterToDecode += morseCode[i];
+        }
+    }
+
+    console.log(decodedMessage);
+    let message = decodedMessage.join("")
+    console.log(message);
+    return message
+}
+
+  
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
 
 
 
